@@ -1,9 +1,23 @@
 import { atom, selector } from "recoil";
 import { recoilPersist } from "recoil-persist";
 const { persistAtom } = recoilPersist();
-export const todosState = atom<string[]>({
+
+export interface IToDo {
+  id: number;
+  text: string;
+}
+
+export interface IToDosState {
+  [key: string]: IToDo[];
+}
+
+export const todosState = atom<IToDosState>({
   key: "todosState",
-  default: ["a", "b", "c", "d", "e", "f", "g"],
+  default: {
+    todo: [],
+    doing: [],
+    done: [],
+  },
   effects_UNSTABLE: [persistAtom],
 });
 export const isDartState = atom({
