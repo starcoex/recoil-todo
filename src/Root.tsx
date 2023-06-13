@@ -6,6 +6,7 @@ import { isDartState } from "./Atoms/atoms";
 import GlobalStyle from "./styles/GlobalStyle";
 import { darkTheme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
+import Layout from "./components/Layout/Layout";
 
 const client = new QueryClient();
 
