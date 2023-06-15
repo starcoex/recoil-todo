@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { StyledAvatar } from "../toDos/styledComponents/StyledComponents";
 
 const Containes = styled.div`
   background-color: #026aa7;
@@ -27,7 +28,7 @@ const Right = styled.div`
   background-color: tomato;
   flex-grow: 1;
 `;
-const Avatar = styled.div`
+const HeaderAvatar = styled.div`
   img {
     display: block;
     position: absolute;
@@ -45,10 +46,11 @@ export default function Header() {
     <div>
       <Containes>
         <Logo />
-        <Right />
-        <Avatar>
-          <img src="./assets/images/starcoex.png" alt="avatar" />
-        </Avatar>
+        <Right>
+          <HeaderAvatar>
+            <StyledAvatar src="./assets/images/starcoex.png" />
+          </HeaderAvatar>
+        </Right>
       </Containes>
     </div>
   );

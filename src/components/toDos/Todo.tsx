@@ -22,7 +22,6 @@ const TodoContainer = styled.div`
   flex-direction: row;
   white-space: nowrap;
   height: 100%;
-  margin-top: 45px;
   /* display: flex;
   max-width: 480px;
   width: 100%;

@@ -16,6 +16,21 @@ interface IBoardProps {
 interface IFrom {
   toDo: string;
 }
+const TodoContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  white-space: nowrap;
+  height: 100%;
+  margin-top: 45px;
+  /* display: flex;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+`;
 
 const TodoList = styled.div`
   background-color: #dfe3e6;
@@ -128,15 +143,6 @@ export default function Board({ toDos, boardId }: IBoardProps) {
         <button>Click</button>
       </Form> */}
 
-      <TodoListHead>
-        <TodoListHeadTitle>
-          <div>{boardId}</div>
-        </TodoListHeadTitle>
-        <ButtonIcon>
-          <FontAwesomeIcon icon={faTrash} color={"white"} size={"lg"} />
-        </ButtonIcon>
-      </TodoListHead>
-
       <Droppable droppableId={boardId} type="category" direction="horizontal">
         {(provided) => (
           <>
@@ -144,6 +150,14 @@ export default function Board({ toDos, boardId }: IBoardProps) {
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
+              <TodoListHead>
+                <TodoListHeadTitle>
+                  <div>{boardId}</div>
+                </TodoListHeadTitle>
+                <ButtonIcon>
+                  <FontAwesomeIcon icon={faTrash} color={"white"} size={"lg"} />
+                </ButtonIcon>
+              </TodoListHead>
               {toDos.map((toDo, index) => (
                 <DragabbleCard
                   key={toDo.id}

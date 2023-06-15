@@ -16,13 +16,11 @@ const TodoCreateButton = styled.button`
 `;
 export default function TodoCreate() {
   return (
-    <>
-      <Form>
-        <TodoFormButton>Save</TodoFormButton>
-        <TodoCreateButton>
-          <FontAwesomeIcon icon={faAdd} color={"white"} size={"lg"} />
-        </TodoCreateButton>
-      </Form>
-    </>
+    <Form>
+      <TodoFormButton>Save</TodoFormButton>
+      <TodoCreateButton>
+        <FontAwesomeIcon icon={faAdd} color={"white"} size={"lg"} />
+      </TodoCreateButton>
+    </Form>
   );
 }

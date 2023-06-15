@@ -1,7 +1,7 @@
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faL, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Draggable } from "@hello-pangea/dnd";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 interface IDragabbleCardProps {
@@ -54,6 +54,11 @@ const TodoCardMember = styled.div`
 const Avatar = styled.img``;
 
 function DragabbleCard({ toDoId, index, toDoText }: IDragabbleCardProps) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [listTitle, setListTitle] = useState(toDoText);
+  const handleFocus = () => {};
+  const handleEditTitleList = () => {};
+  const handleRemove = () => {};
   return (
     <Draggable draggableId={toDoId + ""} index={index}>
       {(provided) => (

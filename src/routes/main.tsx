@@ -7,6 +7,7 @@ import Home from "./Home";
 
 import CountryTemplate from "../components/country/CountryTemplate";
 import Layout from "../components/Layout/Layout";
+import Todo from "../components/toDo/Todo";
 
 const routers = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const routers = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+      { path: "/todo", element: <Todo /> },
     ],
   },
 ]);

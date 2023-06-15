@@ -1,0 +1,6 @@
+.done-task {
+  text-decoration: line-through;
+}
+.do-task {
+  background-color: tomato;
+}
